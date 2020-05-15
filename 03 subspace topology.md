@@ -44,7 +44,7 @@ We say $A$ is a **subspace** of $X$ to mean $A \subseteq X$ with the subspace to
 
 ### Example - $S^1 \subseteq \R^2$
 
-![S1 subspace topology](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/S1 subspace topology.png)
+![S1 subspace topology](S1 subspace topology.png)
 
 ### When are open sets in a subspace open in the original set?
 

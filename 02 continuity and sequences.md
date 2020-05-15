@@ -11,14 +11,14 @@ $$
 
 ## Continuity
 
-Let $X$ and $Y$ be topological spaces, and $f: X \to Y$. We say $f$ is continuous if for every open set $V \subseteq Y$, $f^{-1}(V) \subseteq U$ is open.
+Let $X$ and $Y$ be topological spaces, and $f: X \to Y$. We say $f$ is **continuous** if for every open set $V \subseteq Y$, $f^{-1}(V) \subseteq U$ is open.
 
 Why this definition?
 
 - in short, because it wokrs without additional assumptions
 - Related definition: Open functions
-- let $X$ and $Y$ be topological spaces, and $f: X \to Y$. $f$ is open if it preserves openness, aka for all open sets $U \subseteq X$, $f(U) \subseteq Y$ is open.
-  - (similarly, a closed function preserves closedness)
+- let $X$ and $Y$ be topological spaces, and $f: X \to Y$. $f$ is **open** if it preserves openness, aka for all open sets $U \subseteq X$, $f(U) \subseteq Y$ is open.
+  - (similarly, a **closed function** preserves closedness)
 - This is not really what we want for continuity! It doesn't necessarily work out.
 
 #### Proposition: $f: X \to Y$ is continuous iff for every closed $C \subseteq Y$, $f^{-1}(C) \subseteq X$ is also closed
@@ -55,11 +55,11 @@ Thus, $f$ is continuous iff for every $y \in Y$, $\epsilon \in \R^+$, and every 
 
 ## Sequences
 
-**Definition.** Let $X$ be a topological space and $A \subseteq X$ be any subset. $p \in X$ is an accumulation point or limit point if every neighbourhood of $p$ has a point in $A$ different from $p$.
+**Definition.** Let $X$ be a topological space and $A \subseteq X$ be any subset. $p \in X$ is an **accumulation point** or **limit point** if every neighbourhood of $p$ has a point in $A$ different from $p$.
 
-**Definition.** Let $X$ be a topological space and $x_1, x_2, x_3, ...$  be a sequence of points in $X$. $x \in X$ is **a** limit of the sequence iff for every neighbourhood $U$ of $x$ there exists an $N \in \N$ such that if $n \geq N$, then $x_n \in U$.
+**Definition.** Let $X$ be a topological space and $x_1, x_2, x_3, ...$  be a sequence of points in $X$. $x \in X$ is **a limit** of the sequence iff for every neighbourhood $U$ of $x$ there exists an $N \in \N$ such that if $n \geq N$, then $x_n \in U$.
 
-Note that $x$ is **a** limit, not necessarily **the** limit of the sequence, because a sequence may have multiple limits in some topological spaces.
+Note that $x$ is *a* limit, not necessarily *the* limit of the sequence, because a sequence may have multiple limits in some topological spaces.
 
 #### Unique convergence in metric spaces
 
@@ -75,15 +75,15 @@ Note that this proof hinges on the ability to find disjoint open balls containin
 
 ### Hausdorff spaces
 
-A topological space $X$ is Hausdorff if for every $x, y \in X$ where $x \neq y$, we can find open sets $U, V \subseteq X$ where $x \in U$, $u \in V$, and $U \cap V = \emptyset$.
+A topological space $X$ is **Hausdorff** if for every $x, y \in X$ where $x \neq y$, we can find open sets $U, V \subseteq X$ where $x \in U$, $u \in V$, and $U \cap V = \emptyset$.
 
 Limits are unique in Hausdorff spaces! This can be shown by slightly modifying the proof above for metric spaces.
 
 Even though non-Hausdorff spaces seem pathological, they arise naturally in some areas (e.g. algebraic geometry).
 
-##### In Hausdorff spaces, singleton sets, i.e $\lbrace p \rbrace$, are closed
+##### In Hausdorff spaces, singleton sets, i.e $\curlies{p}$, are closed
 
-If $X$ is Hausdorff, every $q \neq p$ has a neighbourhood disjoint of $p$, so $\lbrace p \rbrace^C$, the union of all of these, is open.
+If $X$ is Hausdorff, every $q \neq p$ has a neighbourhood disjoint of $p$, so $\curlies{p}^C$, the union of all of these, is open.
 
 ### Theorem about limits
 
@@ -100,7 +100,7 @@ Let $X$ be a first countable topological space, let $A \subseteq X$ be any subse
 
 Suppose $x \in A$, then $x$ is the limit of the sequence $x, x, x, ...$
 
-Suppose $x \in \partial A$ but $x \notin A$, then since $X$ is first countable, there exists a nested countable basis at $x$: $U_1 \supseteq U_2 \supseteq U_3 \supseteq ...$ where each $U_i$ is open and contains $x$. Since $x \in \partial A$, for each $n \in \N$, $U_n \cap A \neq \emptyset$ , so we can construct a sequence $\lbrace x_n \rbrace$ by choosing each $x_n \in U_n \cap A$. Clearly this sequence converges consists of points in $A$ and converges to $x$.
+Suppose $x \in \partial A$ but $x \notin A$, then since $X$ is first countable, there exists a nested countable basis at $x$: $U_1 \supseteq U_2 \supseteq U_3 \supseteq ...$ where each $U_i$ is open and contains $x$. Since $x \in \partial A$, for each $n \in \N$, $U_n \cap A \neq \emptyset$ , so we can construct a sequence $\curlies{x_n}$ by choosing each $x_n \in U_n \cap A$. Clearly this sequence converges consists of points in $A$ and converges to $x$.
 
 ($\Leftarrow$) Suppose $x \notin \overline A$, then $x \in \Ext(A)$, and $x_1, x_2, x_3, ...$ is a sequence of points in $A$.
 
@@ -131,3 +131,24 @@ Let $C \subseteq Y$ be a closed set. We will use part 3 of the previous proof.
 Let $a_1, a_2, ... \in f^{-1}(C)$ with $a_i \to a$. By hypothesis, $f(a_i) \to f(a)$. Moreover, $f(a_i) \in C$, so $f(a) \in \overline C = C$ since $C$ is closed. Thus, $a \in f^{-1}(C)$.
 
 By part 3 the previous proof, we know that $f^{-1}(C)$ is closed. Therefore, $f$ is continuous.
+
+## Homeomorphisms
+
+Let $X$ and $Y$ be topological spaces, and $f: X \to Y$ a bijection between them. Then $f$ is a **homeomorphism** if both $f$ and $f^{-1}$ are continuous.
+
+- There exist continuous bijections whose inverses are not continuous!
+- e.g. if $f : (X, \T_{discrete}) \to (X, \T_{trivial})$ is the identity map, then $f$ is continuous but its inverse is not!
+
+### Covers
+
+Let $X$ be a topological space and $A = \lbrace A_\alpha \rbrace_{\alpha \in I}$ be a collection of subsets of $X$. Then $A$ is a **cover** of $X$ if
+
+$$
+X = \bigcup_{\alpha \in I} A_\alpha
+$$
+
+- If $A_\alpha$ is open for each $\alpha \in I$, then $A$ is an **open cover**. We similarly define a **closed cover**. Bases are an example of open covers.
+- We care about covers because they sometimes help us to examine local properties.
+- Given a cover $A = \lbrace A_\alpha \rbrace_{\alpha \in I}$ of $X$ and a subset $J \subseteq I$, $B = \lbrace A_\beta \rbrace_{\beta \in J}$ is a **subcover** if $B$ is also a cover of $X$.
+- Given two covers $A = \lbrace A_\alpha \rbrace_{\alpha \in I}$ and $B = \lbrace B_\beta \rbrace_{\beta \in J}$, $A$ is a **refinement** of $B$ if for all $\alpha \in I$, there exists $\beta \in J$ such that $A_\alpha \subseteq B_\beta$.
+- Notice that subcovers are refinements.

@@ -117,7 +117,7 @@ $$
 \T_\B = \curlies{U \subseteq X : U \text{ is the (arbitrary) union of some elements of } \B}
 $$
 
-Then $\T_\B$ is a topology. To prove this, we need to show that it satisfies the conditions on topologies:
+Then $\T_\B$ is a topology, and we say $\B$ **generates** $\T_\B$. To prove this, we need to show that it satisfies the conditions on topologies:
 
 1. $\emptyset, X$
    - $\emptyset$ is the union of no elements of $\B$, so $\emptyset \in \T_\B$
@@ -135,7 +135,7 @@ Thus, every basis $\B$ for $X$ is the basis of a topology $\T_\B$ for $X$
 
 #### Example
 
-A metric space is a pair $(M, d)$ where $M$ is a set and $d: M \times M \to \R_{\geq 0}$ is a distance function, i.e.
+A **metric space** is a pair $(M, d)$ where $M$ is a set and $d: M \times M \to \R_{\geq 0}$ is a distance function, i.e.
 
 1. $d(x, x) = 0$
 2. $d(x, y) = d(y, x)$

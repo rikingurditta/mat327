@@ -65,7 +65,7 @@ Note that $x$ is **a** limit, not necessarily **the** limit of the sequence, bec
 
 Let $(X, d)$ be a metric space, and $x_1, x_2, x_3, ...$ be a sequence with $x_i \to x$ and $x_i \to y$, then $x = y$.
 
-**Proof.** Suppose $x \neq y$, then if $r = |x - y| / 2 \neq 0$, then $B_r(x)$ and $B_r(y)$ are disjoint.
+**Proof.** Suppose $x \neq y$, then if $r = \vert x - y \vert / 2 \neq 0$, then $B_r(x)$ and $B_r(y)$ are disjoint.
 
 If $x_i \to x$, then since $x \in B_r(x)$, there exists $N \in \N$ such that if $n \geq N$, then $x_n \in B_r(x)$, so $x_n \notin B_r(y)$.
 

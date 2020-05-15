@@ -1,3 +1,5 @@
+# Continuity and Sequences
+
 $$
 \newcommand{\ds}{\displaystyle}
 \newcommand{\curlies}[1]{\lbrace #1 \rbrace}
@@ -6,8 +8,6 @@ $$
 \newcommand{\Ext}{\text{Ext}}
 \newcommand{\B}{\mathcal B}
 $$
-
-# Continuity and Sequences
 
 ## Continuity
 

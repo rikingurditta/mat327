@@ -34,9 +34,11 @@ If $f: X \to Y$ is a function and $\B$ is a basis for $Y$, then $f$ is continuou
 ($\Rightarrow$) Suppose $f$ is continuous. Then for each $B \in \B$, $B$ is open so $f^{-1}(B)$ is open.
 
 ($\Leftarrow$) Suppose for every $B \in \B$, $f^{-1}(B)$ is open. Suppose $U \subseteq Y$ is open, then $\ds U = \bigcup_{i \in I} B_i \text{ where } B_i \in \B$. Then,
+
 $$
 f^{-1}(U) = f^{-1}\left(\bigcup_{i \in I} B_i\right) = \bigcup_{i \in I} f^{-1}(B)
 $$
+
 Thus, $f^{-1}(U)$ is the arbitrary union of open sets, so it is open. Since $U$ is arbitrary, this is true for every open $U$.
 
 #### Example: metric spaces

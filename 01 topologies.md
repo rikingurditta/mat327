@@ -55,6 +55,7 @@ Let $(X, \T)$ be a topological space and $A \subseteq X$
 The interior of a set $A$ is the "biggest" open set contained in $A$
 
 The **interior** of $A$ is defined as
+
 $$
 A^O = \bigcup_{U \subseteq A,\ U \text{ is open}} U
 $$
@@ -64,12 +65,15 @@ This is a union of open sets, so it is open
 ### Closure
 
 The **closure** of $A$ is defined as
+
 $$
 \overline A = \bigcap_{A \subseteq U \subseteq X,\ U \text{ is closed}} U
 $$
+
 This is an intersection of closed sets, so it is closed
 
 It is clear that
+
 $$
 A^O \subseteq A \subseteq \overline A
 $$
@@ -77,17 +81,21 @@ $$
 ### Exterior
 
 The **exterior** of $A$ is defined as
+
 $$
 \Ext(A) = X \setminus \overline A
 $$
+
 This is the complement of a closed set, so it is open
 
 ### Boundary
 
 The **boundary** of $A$ is defined as
+
 $$
 \partial A = X \setminus (A^O \cup \Ext(A))
 $$
+
 $A^O$ and $\Ext(A)$ are open so $A^O \cup \Ext(A)$ is open, so its complement  $\partial A$ is closed
 
 ## Bases
@@ -104,10 +112,10 @@ Forgetting $\T$, we can say $\B$ is a basis for $X$ if:
 Bases are useful because we can use them to define topologies, so we don't have to describe every open set
 
 We define a collection of subsets
+
 $$
 \T_\B = \curlies{U \subseteq X : U \text{ is the (arbitrary) union of some elements of } \B}
 $$
-
 
 Then $\T_\B$ is a topology. To prove this, we need to show that it satisfies the conditions on topologies:
 
@@ -134,10 +142,13 @@ A metric space is a pair $(M, d)$ where $M$ is a set and $d: M \times M \to \R_{
 3. $d(x, z) \leq d(x, y) + d(y, z)$ (triangle inequality)
 
 We can define "open balls"
+
 $$
 B_\epsilon(p) = \curlies{x \in M : d(x, p) < \epsilon}
 $$
+
 and a basis using them:
+
 $$
 \B = \curlies{B_\epsilon(p) : \epsilon \in \R^+ \text{ and } p \in M}
 $$
@@ -149,9 +160,11 @@ This, constructed in $\R^n$ with Euclidean distance, is the usual topology that 
 ##### The trivial metric
 
 The trivial metric on any space is the one with distance function
+
 $$
 d(x, y) = \begin{cases} 0 & x = y \\ 1 & x \neq y \end{cases}
 $$
+
 If $\epsilon > 0$, then this the open ball topology on the space is the same as the discrete topology!
 
 ### Local bases
@@ -175,9 +188,11 @@ Suppose $(X, \T)$ is second countable, then there is a basis $\B = \curlies{B_1,
 let $p \in X$ be any point, let $U \subseteq X$ be an open set where $p \in U$
 
 since $\B$ is a basis, $U$ can be written as a union of elements of $\B$, so
+
 $$
 U = \bigcup_{i = 1}^\infty B_i
 $$
+
 then there must be an $i \in \N$ so that $p \in B_i$
 
 then $\B_p = \curlies{B \in \B : p \in B}$ is a local basis around $p$, and it is a subset of $\B$ so it is countable

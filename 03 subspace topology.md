@@ -23,9 +23,10 @@ $$
 
    - $\emptyset \in \T_A$ since $\emptyset \in \T$
    - $X \in \T$, so $X \cap A = A \in \T_A$
+
 2. Arbitrary unions
 
-   - suppose $\curlies{U_i}_{i \in I} \subseteq \T$, then $\ds \bigcup_{i \in I} U_i \in \T$
+   - suppose \( \curlies{U_i}_{i \in I} \subseteq \T \), then $\ds \bigcup_{i \in I} U_i \in \T$
 
    - for each $i \in I$, $U_i \cap A \in \T_A$
 

@@ -55,9 +55,13 @@ Thus, $f$ is continuous iff for every $y \in Y$, $\epsilon \in \R^+$, and every 
 
 ## Sequences
 
-**Definition.** Let $X$ be a topological space and $A \subseteq X$ be any subset. $p \in X$ is an **accumulation point** or **limit point** if every neighbourhood of $p$ has a point in $A$ different from $p$.
+#### Limit points
 
-**Definition.** Let $X$ be a topological space and $x_1, x_2, x_3, ...$  be a sequence of points in $X$. $x \in X$ is **a limit** of the sequence iff for every neighbourhood $U$ of $x$ there exists an $N \in \N$ such that if $n \geq N$, then $x_n \in U$.
+Let $X$ be a topological space and $A \subseteq X$ be any subset. $p \in X$ is an **accumulation point** or **limit point** if every neighbourhood of $p$ has a point in $A$ different from $p$.
+
+#### Limits
+
+Let $X$ be a topological space and $x_1, x_2, x_3, ...$  be a sequence of points in $X$. $x \in X$ is **a limit** of the sequence iff for every neighbourhood $U$ of $x$ there exists an $N \in \N$ such that if $n \geq N$, then $x_n \in U$.
 
 Note that $x$ is *a* limit, not necessarily *the* limit of the sequence, because a sequence may have multiple limits in some topological spaces.
 
@@ -81,7 +85,7 @@ Limits are unique in Hausdorff spaces! This can be shown by slightly modifying t
 
 Even though non-Hausdorff spaces seem pathological, they arise naturally in some areas (e.g. algebraic geometry).
 
-##### In Hausdorff spaces, singleton sets, i.e $\curlies{p}$, are closed
+#### In Hausdorff spaces, singleton sets (sets like $\curlies{p}$) are closed
 
 If $X$ is Hausdorff, every $q \neq p$ has a neighbourhood disjoint of $p$, so $\curlies{p}^C$, the union of all of these, is open.
 

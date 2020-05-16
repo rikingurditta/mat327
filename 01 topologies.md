@@ -78,6 +78,8 @@ $$
 A^O \subseteq A \subseteq \overline A
 $$
 
+And that $A = \overline A$ if $A$ is closed.
+
 ### Exterior
 
 The **exterior** of $A$ is defined as

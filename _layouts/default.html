@@ -28,6 +28,22 @@
     });
     </script>
     <meta charset="UTF-8">
+    <style type="text/css">
+        #sidebar {
+            display: none;
+        }
+        @media only screen and (min-width: 1025px) {
+            #sidebar {
+                display: block;
+                position: relative;
+                float: left;
+                width: 300px;
+                left: calc((100% - 1024px) / 2);
+                min-height: calc(100vh - 140px);
+                padding-top: 10px;
+            }
+        }
+    </style>
 
 {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,6 +70,10 @@
       {% endif %}
       {% endcomment %}
     </header>
+
+    <section id="sidebar">
+        {% include toc.html html=content %}
+    </section>
 
     <main id="content" class="main-content" role="main">
       {{ content }}

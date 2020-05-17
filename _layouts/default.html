@@ -30,30 +30,33 @@
     <meta charset="UTF-8">
     <style type="text/css">
         #sidebar {
-            display: none;
-            font-size: 14px;
+          display: none;
+          font-size: 14px;
         }
         .toc-list {
-            padding-left: 25px;
+          padding-left: 25px;
+        }
+        .main-page-button-hidden {
+          visibility: hidden;
         }
         @media only screen and (min-width: 1000px) {
-            #sidebar {
-                display: block;
-                position: relative;
-                float: left;
-                width: 250px;
-                /*left: calc((100% - 1000px) / 2);*/
-                min-height: calc(100vh - 140px);
-                padding-top: 10px;
-            }
-            main {
-                display: block;
-                position: relative;
-                float: left;
-                /*left: calc((100% - 1000px) / 2);*/
-                width: calc(100% - 250px);
-                margin: 0;
-            }
+          #sidebar {
+              display: block;
+            position: relative;
+            float: left;
+            width: 250px;
+            /*left: calc((100% - 1000px) / 2);*/
+            min-height: calc(100vh - 140px);
+            padding-top: 10px;
+          }
+          main {
+            display: block;
+            position: relative;
+            float: left;
+            /*left: calc((100% - 1000px) / 2);*/
+            width: calc(100% - 250px);
+            margin: 0;
+          }
         }
     </style>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"> -->
@@ -70,7 +73,7 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      <a href="/mat327" style="color: white;">{% unless page.url == "/index" or page.url == "/" %}Back to Main Page{% endunless %}</a>
+      <a href="/mat327" {% unless page.url == "/index" or page.url == "/" %} class="main-page-button-hidden" {% endunless %} style="color: white;">Back to Main Page</a>
       {% comment %}
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>

@@ -84,11 +84,11 @@
       {% endcomment %}
     </header>
 
-    {% unless page.url == "/index" or page.url == "/" %}
-      <section id="sidebar">
+    <section id="sidebar">
+      {% unless page.url == "/index" or page.url == "/" %}
         <div id="js-toc"></div>
-      </section>
-    {% endunless %}
+      {% endunless %}
+    </section>
 
     <main id="content" class="main-content" role="main">
       {{ content }}

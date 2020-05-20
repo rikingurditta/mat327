@@ -2,7 +2,7 @@
 
 $$
 \newcommand{\ds}{\displaystyle}
-\newcommand{\curlies}[1]{\lbrace #1 \rbrace}
+\newcommand{\curlies}[1]{\left\lbrace #1 \right\rbrace}
 
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ext}{\text{Ext}}
@@ -21,7 +21,7 @@ Why this definition?
   - (similarly, a **closed function** preserves closedness)
 - This is not really what we want for continuity! It doesn't necessarily work out.
 
-#### Proposition: $f: X \to Y$ is continuous iff for every closed $C \subseteq Y$, $f^{-1}(C) \subseteq X$ is also closed
+#### $f$ is continuous iff for every closed $C$, $f^{-1}(C)$ is also closed
 
 ($\Rightarrow$) Suppose $f$ is continuous, $C \subseteq Y$ is closed, then $C^C$ is open. Then $f^{-1}(C^C)$ is open. $f^{-1}(C^C)^C$ is closed, and $f^{-1}(C^C)^C = f^{-1}(C)$, so $f^{-1}(C)$ is closed.
 
@@ -89,7 +89,7 @@ Even though non-Hausdorff spaces seem pathological, they arise naturally in some
 
 If $X$ is Hausdorff, every $q \neq p$ has a neighbourhood disjoint of $p$, so $\curlies{p}^C$, the union of all of these, is open.
 
-### Theorem about limits
+### Limits in first countable spaces
 
 Let $X$ be a first countable topological space, let $A \subseteq X$ be any subset and $x \in X$.
 

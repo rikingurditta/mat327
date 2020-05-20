@@ -4,7 +4,7 @@ Topology is the study of shapes.
 
 $$
 \newcommand{\ds}{\displaystyle}
-\newcommand{\curlies}[1]{\lbrace #1 \rbrace}
+\newcommand{\curlies}[1]{\left\lbrace #1 \right\rbrace}
 
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ext}{\text{Ext}}

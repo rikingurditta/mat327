@@ -2,7 +2,7 @@
 
 $$
 \newcommand{\ds}{\displaystyle}
-\newcommand{\curlies}[1]{\lbrace #1 \rbrace}
+\newcommand{\curlies}[1]{\left\lbrace #1 \right\rbrace}
 
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ext}{\text{Ext}}
@@ -56,7 +56,7 @@ Similarly, if $C \subseteq X$ is closed then the closed subsets of $(C, \T_C)$ a
 
 ## Definition by pullback
 
-Let $A \subseteq X$, then it comes naturally with an injection $\iota_A : A \to X$, $\iota_A: x \to x$, called the **inclusion map**.
+$A \subseteq X$ comes naturally with an injection $\iota_A : A \to X$, $\iota_A: x \mapsto x$, called the **inclusion map**.
 
 We can define a set of subsets by "pullback":
 $$
@@ -66,12 +66,127 @@ However, notice that for each $U \subseteq X$, $\iota_A^{-1}(U) = U \cap A$, so 
 
 The result below shows how this sort of definition allows us to define a subspace topology by deciding which functions are continuous.
 
-### Continuity of $\iota_A$
+### Continuity of $\iota_A$ when $A$ is a subspace
 
-$\iota_A: A \to X$ is continuous, and $\T_A$ is the smallest topology where this is true.
+$\iota_A: (A, \T_A) \to (X, \T)$ is continuous, and $\T_A$ is the smallest topology where this is true.
 
 **Proof.**
 
 Let $U \in \T$ be open, then $\iota_A^{-1}(U) = U \cap A \in \T_A$, so $\iota_A$ is continuous.
 
 Any topology that makes $\iota_A$ continuous requires by definition that every inverse image of an open set in $\T$ is open, so $\T_A = \curlies{ \iota_A^{-1}(U) : U \in \T}$ must be a subset of any topology on $A$ where $\iota_A$ is continuous.
+
+This means that $\iota_A$ is continuous iff the topology on $A$ contains $\T_A$.
+
+## Characteristic property of subspace topology
+
+Suppose $X$ is a topological space.
+
+1. Suppose $S \subseteq X$ is a subspace. Then $(S, \T_S)$ satisfies $(P_S)$: a map $f: Y \to S$ is continuous if and only if the composite map $\iota_S \circ f : Y \to X$ is continuous.
+
+![image-20200520131349831](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/characteristic property composite map.png)
+
+2. If $S \subseteq X$ is any subset, then the only topology that on $S$ that satisfies $(P_S)$ is the subspace topology.
+
+**Proof.**
+
+1. Suppose $S$ is a subspace of $X$.
+
+($\Rightarrow$) Suppose $f: Y \to X$ is continuous, then $\iota_S \circ f : Y \to X$ is continuous, because it is the composition of continuous functions
+
+($\Leftarrow$) Suppose $\iota_S \circ f$ is continuous, then we need to prove that $f$ is continuous. Let $U \subseteq S$ be an open set in $S$, then we can find an open set $V \subseteq X$ with $U = V \cap S$. Then,
+$$
+f^{-1}(U) = f^{-1}(V \cap S) = f^{-1}(\iota_S^{-1}(V)) = (\iota_S \circ f)^{-1}(V)
+$$
+$\iota_S \circ f$ is continuous, so $(\iota_S \circ f)^{-1}(V) = f^{-1}(U)$ is open. Thus $f$ is continuous.
+
+2. Suppose $S \subseteq X$ with a topology $\T$ and $(P_S)$ holds.
+
+We need to prove that $\T = \T_S$, the subspace topology.
+
+Let $I_S: (S, \T_S) \to (S, \T)$ be the identity map. $(S, \T)$ satisfies the characteristic property, so we can pick $Y = (S, \T_S)$ and $I_S = f:Y \to S$.
+
+![image-20200520132705362](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/characteristic property part 2 proof composition map.png)
+
+The function $\iota_S \circ I_S$ is the identity map from $S$ to $X$, so it is continuous, so by $(P_S)$ $I_S$ is continuous. Thus, if $U \subseteq S$ is open in $\T$, then $I_S^{-1}(U) = U$ is also open in $\T_S$. This implies $\T \subseteq \T_S$.
+
+Doing the same thing with $I_S': (S, \T) \to (S, \T_S)$ we get $\T_S \subseteq \T$, so $\T = \T_S$.
+
+### The identity map is a homeomorphism iff topologies are equal
+
+Let $\T_1, \T_2$ be topologies on $X$. Then the identity map $id_X : (X, \T_1) \to (X, \T_2)$ is a homeomorphism if and only if $\T_1 = \T_2$.
+
+$id_X$ is continuous iff for all open sets $U \in \T_2$, the preimage $id_X^{-1}(U) = U \in \T_1$, so it is continuous iff $\T_2 \subseteq \T_1$.
+
+Similarly, $id_X^{-1}$ is continuous iff $\T_1 \subseteq \T_2$.
+
+Thus, $id_X$ is a homeomorphism if and only if they are equal.
+
+## Subspaces work nicely with continuity
+
+Let $f: X \to Y$ be continuous.
+
+1. If $S \subseteq X$ is a subspace, then $f\vert_S : S \to Y$ is continuous
+2. If $S \subseteq Y$ is a subspace, then restricting the codomain $f_S : X \to S$ is continuous
+3. If $Y \subseteq Z$ is a subspace, then $f_Z: X \to Z$ is continuous
+
+**Proof.**
+
+1. $f|_S = f \circ \iota_S$ which is a composition of continuous functions, so it is continuous
+2. ![image-20200520134739905](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/subspace range restriction composition diagram.png)
+3. $f_Z = \iota_Y \circ f$ is a composition of continuous functions, so it is continuous
+
+### Example: Isometries on $S^2$
+
+Recall that $S^2 \subseteq \R^3$ is the unit sphere. Let $A \in \mathcal L(S^2)$ be a linear isometry, so $\langle Ax, Ay \rangle = \langle Ax, Ay \rangle$. Prove it is continuous when $S^2$ is a subspace of $\R^3$.
+
+**Proof.**
+
+A is a linear operator, so it is a continuous function on $\R^3$.
+
+Then the restriction $A: S^2 \to \R^3$ is continuous.
+
+Because $A$ is an isometry, $A(S^2) \subseteq S^2$. Then we can restrict the codomain and see that $A : S^2 \to S^2$ is continuous.
+
+### Example: Invertible $2 \times 2$ matrices
+
+Consider invertible matrices in $\R^4$
+
+$$
+\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \R^4
+$$
+
+where $ad - bc \neq 0$. The space of these matrices given the subspace topology from $\R^4$ is called $GL(2, \R)$.
+
+Then the inverse map
+
+$$
+\begin{align}
+i : &\ GL(2, \R) \to GL(2, \R) \\
+&\ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+\end{align}
+$$
+
+is continuous, as it is a continuous map from $GL(2, \R)$ to $\R^4$ with its range restricted to the subspace $GL(2, R)$.
+
+## Nice properties of subspaces
+
+Let $X$ be a topological space
+
+1. If $A \subseteq B \subseteq X$, then $\T_A = (\T_B)_A$ - so the subspace topology of $A$ in $X$ is the same as the subspace topology of $A$ in the subspace $B$
+2. Suppose $\B$ is a basis for $X$. The set $\B_A = \curlies{A \cap B: B \in \B}$
+3. If $X$ is Hausdorff, second-countable, or first-countable, then so are its subspaces
+
+**Proof.**
+
+1. Suppose $A \subseteq B \subseteq X$.
+
+We define the inclusion maps $\iota_A : A \to X$, $\iota_B : B \to X$, and $\iota_A^B: A \to B$.
+
+![image-20200520141800337](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/subspace of subspace inclusions composition.png)
+
+Consider $B$ as a subspace of $X$, then it satisfies the characteristic property. Then, no matter what topology $A$ has, $\iota_A^B$ is continuous iff $\iota_A$ is continuous.
+
+If we choose $A$ to have the topology $\T_A$, then $\iota_A$ is continuous, so $\iota_A^B$ is continuous, so $(\T_B)_A \subseteq A$.
+
+If we choose $A$ to have the topology $(T_B)_A$, then $\iota_A^B$ is continuous, so $\iota_A$ is continuous, so $\T_A \subseteq (\T_B)_A$.

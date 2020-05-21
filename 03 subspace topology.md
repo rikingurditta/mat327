@@ -94,9 +94,9 @@ Suppose $X$ is a topological space.
 
 1. Suppose $S$ is a subspace of $X$.
 
-($\Rightarrow$) Suppose $f: Y \to S$ is continuous, then $\iota_S \circ f : Y \to X$ is continuous, because it is the composition of continuous functions
+​    ($\Rightarrow$) Suppose $f: Y \to S$ is continuous, then $\iota_S \circ f : Y \to X$ is continuous, because it is the composition of continuous functions
 
-($\Leftarrow$) Suppose $\iota_S \circ f$ is continuous, then we need to prove that $f$ is continuous. Let $U \subseteq S$ be an open set in $S$, then we can find an open set $V \subseteq X$ with $U = V \cap S$. Then,
+​    ($\Leftarrow$) Suppose $\iota_S \circ f$ is continuous, then we need to prove that $f$ is continuous. Let $U \subseteq S$ be an open set in $S$, then we can find an open set $V \subseteq X$ with $U = V \cap S$. Then,
 
 $$
 \begin{align}
@@ -106,19 +106,19 @@ f^{-1}(U) &= f^{-1}(V \cap S) \\
 \end{align}
 $$
 
-$\iota_S \circ f$ is continuous, so $(\iota_S \circ f)^{-1}(V) = f^{-1}(U)$ is open. Thus $f$ is continuous.
+​    $\iota_S \circ f$ is continuous, so $(\iota_S \circ f)^{-1}(V) = f^{-1}(U)$ is open. Thus $f$ is continuous.
 
 2. Suppose $S \subseteq X$ with a topology $\T'$ and $(P_S)$ holds.
 
-We need to prove that $\T' = \T_S$, the subspace topology.
+​    We need to prove that $\T' = \T_S$, the subspace topology.
 
-Let $I_S: (S, \T_S) \to (S, \T')$ be the identity map. $(S, \T')$ satisfies the characteristic property, so we can pick $Y = (S, \T_S)$ and $I_S = f:Y \to S$.
+​    Let $I_S: (S, \T_S) \to (S, \T')$ be the identity map. $(S, \T')$ satisfies the characteristic property, so we can pick $Y = (S, \T_S)$ and $I_S = f:Y \to S$.
 
 ![characteristic property part 2 proof composition map.png](characteristic property part 2 proof composition map.png)
 
-The function $\iota_S \circ I_S$ is the identity map from $(S, \T_S)$ to $(X, \T)$, so it is an identity from a subspace of $X$ to $X$, so it is continuous. By $(P_S)$, this means that $I_S$ is also continuous. Thus, if $U \subseteq S$ is open in $\T'$, then $I_S^{-1}(U) = U$ is also open in $\T_S$. This implies $\T' \subseteq \T_S$.
+​    The function $\iota_S \circ I_S$ is the identity map from $(S, \T_S)$ to $(X, \T)$, so it is an identity from a subspace of $X$ to $X$, so it is continuous. By $(P_S)$, this means that $I_S$ is also continuous. Thus, if $U \subseteq S$ is open in $\T'$, then $I_S^{-1}(U) = U$ is also open in $\T_S$. This implies $\T' \subseteq \T_S$.
 
-Doing the same thing with $I_S': (S, \T') \to (S, \T_S)$ we get $\T_S \subseteq \T''$, so $\T' = \T_S$.
+​    Doing the same thing with $I_S': (S, \T') \to (S, \T_S)$ we get $\T_S \subseteq \T''$, so $\T' = \T_S$.
 
 ### The identity map is a homeomorphism iff topologies are equal
 

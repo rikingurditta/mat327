@@ -94,7 +94,7 @@ Suppose $X$ is a topological space.
 
 1. Suppose $S$ is a subspace of $X$.
 
-($\Rightarrow$) Suppose $f: Y \to X$ is continuous, then $\iota_S \circ f : Y \to X$ is continuous, because it is the composition of continuous functions
+($\Rightarrow$) Suppose $f: Y \to S$ is continuous, then $\iota_S \circ f : Y \to X$ is continuous, because it is the composition of continuous functions
 
 ($\Leftarrow$) Suppose $\iota_S \circ f$ is continuous, then we need to prove that $f$ is continuous. Let $U \subseteq S$ be an open set in $S$, then we can find an open set $V \subseteq X$ with $U = V \cap S$. Then,
 

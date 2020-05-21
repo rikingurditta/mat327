@@ -96,7 +96,11 @@ Suppose $X$ is a topological space.
 
 ($\Leftarrow$) Suppose $\iota_S \circ f$ is continuous, then we need to prove that $f$ is continuous. Let $U \subseteq S$ be an open set in $S$, then we can find an open set $V \subseteq X$ with $U = V \cap S$. Then,
 $$
-f^{-1}(U) = f^{-1}(V \cap S) = f^{-1}(\iota_S^{-1}(V)) = (\iota_S \circ f)^{-1}(V)
+\begin{align}
+f^{-1}(U) &= f^{-1}(V \cap S) \\
+&= f^{-1}(\iota_S^{-1}(V)) \\
+&= (\iota_S \circ f)^{-1}(V)
+\end{align}
 $$
 $\iota_S \circ f$ is continuous, so $(\iota_S \circ f)^{-1}(V) = f^{-1}(U)$ is open. Thus $f$ is continuous.
 

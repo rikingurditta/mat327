@@ -25,12 +25,11 @@ Then $\B_{X_1 \times ... \times X_n}$ is a basis for $X_1 \times ... \times X_n$
 
 1. Basis covers the space
 
-$X_1 \times ... \times X_n \in \B_{X_1 \times ... \times X_n}$, so $\ds \bigcup \B_{X_1 \times ... \times X_n} = X_1 \times ... \times X_n$
+   $X_1 \times ... \times X_n \in \B_{X_1 \times ... \times X_n}$, so $\ds \bigcup \B_{X_1 \times ... \times X_n} = X_1 \times ... \times X_n$
 
 2. Points in intersections have basis elements surrounding them
 
 Let $U = U_1 \times ... \times U_n$ and $V = V_1 \times ... \times V_n$ be elements of $\B_{X_1 \times ... \times X_n}$, then
-
 $$
 \begin{align}
 U \cap V &= (U_1 \times ... \times U_n) \cap (V_1 \times ... \times V_n) \\
@@ -57,5 +56,10 @@ $$
 
 Let $X_1, ..., X_n$ be topological spaces.
 
-1. The product topology on $X_1 \times ... \times X_n$ satisfies $(P_P)$: For any topological space $Y$, a map $f: Y \to X_1 \times ... \times X_n$ is continuous if and only if $f_i = \pi_i \circ f$ is continuous for each $i \in \curlies{1, ..., n}$.
-2. The product topology on $X_1 \times ... \times X_n$ is the only topology that satisfies the characteristic property.
+*Part 1:*
+
+The product topology on $X_1 \times ... \times X_n$ satisfies $(P_P)$: For any topological space $Y$, a map $f: Y \to X_1 \times ... \times X_n$ is continuous if and only if $f_i = \pi_i \circ f$ is continuous for each $i \in \curlies{1, ..., n}$.
+
+*Part 2:*
+
+The product topology on $X_1 \times ... \times X_n$ is the only topology that satisfies the characteristic property.

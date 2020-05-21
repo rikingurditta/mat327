@@ -108,17 +108,17 @@ $$
 
 $\iota_S \circ f$ is continuous, so $(\iota_S \circ f)^{-1}(V) = f^{-1}(U)$ is open. Thus $f$ is continuous.
 
-2. Suppose $S \subseteq X$ with a topology $\T$ and $(P_S)$ holds.
+2. Suppose $S \subseteq X$ with a topology $\T'$ and $(P_S)$ holds.
 
-We need to prove that $\T = \T_S$, the subspace topology.
+We need to prove that $\T' = \T_S$, the subspace topology.
 
-Let $I_S: (S, \T_S) \to (S, \T)$ be the identity map. $(S, \T)$ satisfies the characteristic property, so we can pick $Y = (S, \T_S)$ and $I_S = f:Y \to S$.
+Let $I_S: (S, \T_S) \to (S, \T')$ be the identity map. $(S, \T')$ satisfies the characteristic property, so we can pick $Y = (S, \T_S)$ and $I_S = f:Y \to S$.
 
 ![characteristic property part 2 proof composition map.png](characteristic property part 2 proof composition map.png)
 
-The function $\iota_S \circ I_S$ is the identity map from $S$ to $X$, so it is continuous, so by $(P_S)$ $I_S$ is continuous. Thus, if $U \subseteq S$ is open in $\T$, then $I_S^{-1}(U) = U$ is also open in $\T_S$. This implies $\T \subseteq \T_S$.
+The function $\iota_S \circ I_S$ is the identity map from $(S, \T_S)$ to $(X, \T)$, so it is an identity from a subspace of $X$ to $X$, so it is continuous. By $(P_S)$, this means that $I_S$ is also continuous. Thus, if $U \subseteq S$ is open in $\T'$, then $I_S^{-1}(U) = U$ is also open in $\T_S$. This implies $\T' \subseteq \T_S$.
 
-Doing the same thing with $I_S': (S, \T) \to (S, \T_S)$ we get $\T_S \subseteq \T$, so $\T = \T_S$.
+Doing the same thing with $I_S': (S, \T') \to (S, \T_S)$ we get $\T_S \subseteq \T''$, so $\T' = \T_S$.
 
 ### The identity map is a homeomorphism iff topologies are equal
 
@@ -140,7 +140,7 @@ Let $f: X \to Y$ be continuous.
 
 **Proof.**
 
-1. $f|_S = f \circ \iota_S$ which is a composition of continuous functions, so it is continuous
+1. $f\vert_S = f \circ \iota_S$ which is a composition of continuous functions, so it is continuous
 2. ![subspace range restriction composition diagram.png](subspace range restriction composition diagram.png)
 3. $f_Z = \iota_Y \circ f$ is a composition of continuous functions, so it is continuous
 
@@ -161,12 +161,12 @@ Because $A$ is an isometry, $A(S^2) \subseteq S^2$. Then we can restrict the cod
 Consider invertible matrices in $\R^4$
 
 $$
-\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \R^4
+\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \R^4,\ ad - bc \neq 0
 $$
 
-where $ad - bc \neq 0$. The space of these matrices given the subspace topology from $\R^4$ is called $GL(2, \R)$.
+The space of these matrices given the subspace topology from $\R^4$ is called $GL(2, \R)$.
 
-Then the inverse map
+Then the matrix inverse map
 
 $$
 \begin{align}

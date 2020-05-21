@@ -59,9 +59,11 @@ Similarly, if $C \subseteq X$ is closed then the closed subsets of $(C, \T_C)$ a
 $A \subseteq X$ comes naturally with an injection $\iota_A : A \to X$, $\iota_A: x \mapsto x$, called the **inclusion map**.
 
 We can define a set of subsets by "pullback":
+
 $$
 \curlies{\iota_A^{-1}(U) : U \in \T}
 $$
+
 However, notice that for each $U \subseteq X$, $\iota_A^{-1}(U) = U \cap A$, so this pullback is equal to $\T_A$!
 
 The result below shows how this sort of definition allows us to define a subspace topology by deciding which functions are continuous.
@@ -84,7 +86,7 @@ Suppose $X$ is a topological space.
 
 1. Suppose $S \subseteq X$ is a subspace. Then $(S, \T_S)$ satisfies $(P_S)$: a map $f: Y \to S$ is continuous if and only if the composite map $\iota_S \circ f : Y \to X$ is continuous.
 
-![image-20200520131349831](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/characteristic property composite map.png)
+![characteristic property composite map.png](characteristic property composite map.png)
 
 2. If $S \subseteq X$ is any subset, then the only topology that on $S$ that satisfies $(P_S)$ is the subspace topology.
 
@@ -95,6 +97,7 @@ Suppose $X$ is a topological space.
 ($\Rightarrow$) Suppose $f: Y \to X$ is continuous, then $\iota_S \circ f : Y \to X$ is continuous, because it is the composition of continuous functions
 
 ($\Leftarrow$) Suppose $\iota_S \circ f$ is continuous, then we need to prove that $f$ is continuous. Let $U \subseteq S$ be an open set in $S$, then we can find an open set $V \subseteq X$ with $U = V \cap S$. Then,
+
 $$
 \begin{align}
 f^{-1}(U) &= f^{-1}(V \cap S) \\
@@ -102,6 +105,7 @@ f^{-1}(U) &= f^{-1}(V \cap S) \\
 &= (\iota_S \circ f)^{-1}(V)
 \end{align}
 $$
+
 $\iota_S \circ f$ is continuous, so $(\iota_S \circ f)^{-1}(V) = f^{-1}(U)$ is open. Thus $f$ is continuous.
 
 2. Suppose $S \subseteq X$ with a topology $\T$ and $(P_S)$ holds.
@@ -110,7 +114,7 @@ We need to prove that $\T = \T_S$, the subspace topology.
 
 Let $I_S: (S, \T_S) \to (S, \T)$ be the identity map. $(S, \T)$ satisfies the characteristic property, so we can pick $Y = (S, \T_S)$ and $I_S = f:Y \to S$.
 
-![characteristic property part 2 proof composition map.png](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/characteristic property part 2 proof composition map.png)
+![characteristic property part 2 proof composition map.png](characteristic property part 2 proof composition map.png)
 
 The function $\iota_S \circ I_S$ is the identity map from $S$ to $X$, so it is continuous, so by $(P_S)$ $I_S$ is continuous. Thus, if $U \subseteq S$ is open in $\T$, then $I_S^{-1}(U) = U$ is also open in $\T_S$. This implies $\T \subseteq \T_S$.
 
@@ -137,7 +141,7 @@ Let $f: X \to Y$ be continuous.
 **Proof.**
 
 1. $f|_S = f \circ \iota_S$ which is a composition of continuous functions, so it is continuous
-2. ![subspace range restriction composition diagram.png](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/subspace range restriction composition diagram.png)
+2. ![subspace range restriction composition diagram.png](subspace range restriction composition diagram.png)
 3. $f_Z = \iota_Y \circ f$ is a composition of continuous functions, so it is continuous
 
 ### Example: Isometries on $S^2$
@@ -187,7 +191,7 @@ Let $X$ be a topological space
 
 We define the inclusion maps $\iota_A : A \to X$, $\iota_B : B \to X$, and $\iota_A^B: A \to B$.
 
-![subspace of subspace inclusions composition.png](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/subspace of subspace inclusions composition.png)
+![subspace of subspace inclusions composition.png](subspace of subspace inclusions composition.png)
 
 Consider $B$ as a subspace of $X$, then it satisfies the characteristic property. Then, no matter what topology $A$ has, $\iota_A^B$ is continuous iff $\iota_A$ is continuous.
 

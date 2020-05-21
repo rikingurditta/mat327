@@ -45,6 +45,7 @@ Since $\B_{X_1 \times ... \times X_n}$ satisfies these two properties, it is a b
 ## Projections
 
 We can define some canonical maps:
+
 $$
 \begin{align}
 \pi_i: &\ X_1 \times ... \times X_n \to X_i \\

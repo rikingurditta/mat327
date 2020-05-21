@@ -106,7 +106,7 @@ We need to prove that $\T = \T_S$, the subspace topology.
 
 Let $I_S: (S, \T_S) \to (S, \T)$ be the identity map. $(S, \T)$ satisfies the characteristic property, so we can pick $Y = (S, \T_S)$ and $I_S = f:Y \to S$.
 
-![image-20200520132705362](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/characteristic property part 2 proof composition map.png)
+![characteristic property part 2 proof composition map.png](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/characteristic property part 2 proof composition map.png)
 
 The function $\iota_S \circ I_S$ is the identity map from $S$ to $X$, so it is continuous, so by $(P_S)$ $I_S$ is continuous. Thus, if $U \subseteq S$ is open in $\T$, then $I_S^{-1}(U) = U$ is also open in $\T_S$. This implies $\T \subseteq \T_S$.
 
@@ -133,7 +133,7 @@ Let $f: X \to Y$ be continuous.
 **Proof.**
 
 1. $f|_S = f \circ \iota_S$ which is a composition of continuous functions, so it is continuous
-2. ![image-20200520134739905](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/subspace range restriction composition diagram.png)
+2. ![subspace range restriction composition diagram.png](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/subspace range restriction composition diagram.png)
 3. $f_Z = \iota_Y \circ f$ is a composition of continuous functions, so it is continuous
 
 ### Example: Isometries on $S^2$
@@ -183,7 +183,7 @@ Let $X$ be a topological space
 
 We define the inclusion maps $\iota_A : A \to X$, $\iota_B : B \to X$, and $\iota_A^B: A \to B$.
 
-![image-20200520141800337](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/subspace of subspace inclusions composition.png)
+![subspace of subspace inclusions composition.png](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/subspace of subspace inclusions composition.png)
 
 Consider $B$ as a subspace of $X$, then it satisfies the characteristic property. Then, no matter what topology $A$ has, $\iota_A^B$ is continuous iff $\iota_A$ is continuous.
 

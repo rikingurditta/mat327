@@ -177,7 +177,7 @@ Given $p \in X$, a basis $\B_p$ around $p$ is a collection of open sets such tha
 
 $(X, \T)$ is **first countable** if there exists a countable basis around each point
 
-- "Things that are not first countable are very bad." - Malors Espinosa
+> "Things that are not first countable are very bad." - Malors
 
 $(X, \T)$ is **second countable** if $\T$ has a countable basis
 

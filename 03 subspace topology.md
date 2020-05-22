@@ -88,7 +88,7 @@ Suppose $(X, \T)$ is a topological space.
 
 Suppose $S \subseteq X$ is a subspace. Then $(S, \T_S)$ satisfies $(P_S)$: a map $f: Y \to S$ is continuous if and only if the composite map $\iota_S \circ f : Y \to X$ is continuous.
 
-![characteristic property composite map.png](characteristic property composite map.png)
+![subspace characteristic property composite map.png](subspace characteristic property composite map.png)
 
 *Part 2:*
 
@@ -122,7 +122,7 @@ We need to prove that $\T' = \T_S$, the subspace topology.
 
 Let $I_S: (S, \T_S) \to (S, \T')$ be the identity map. $(S, \T')$ satisfies the characteristic property, so we can pick $Y = (S, \T_S)$ and $I_S = f:Y \to S$.
 
-![characteristic property part 2 proof composition map.png](characteristic property part 2 proof composition map.png)
+![subspace characteristic property part 2 proof composition map.png](subspace characteristic property part 2 proof composition map.png)
 
 The function $\iota_S \circ I_S$ is the identity map from $(S, \T_S)$ to $(X, \T)$, so it is an identity from a subspace of $X$ to $X$, so it is continuous. By $(P_S)$, this means that $I_S$ is also continuous. Thus, if $U \subseteq S$ is open in $\T'$, then $I_S^{-1}(U) = U$ is also open in $\T_S$. This implies $\T' \subseteq \T_S$.
 

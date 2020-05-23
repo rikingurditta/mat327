@@ -62,7 +62,7 @@ Let $X_1, ..., X_n$ be topological spaces.
 
 The product topology on $X_1 \times ... \times X_n$ satisfies $(P_P)$: For any topological space $Y$, a map $f: Y \to X_1 \times ... \times X_n$ is continuous if and only the components $f_i = \pi_i \circ f$ are continuous for each $i \in \curlies{1, ..., n}$.
 
-![image-20200522121523770](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/product characteristic property.png)
+![product characteristic property.png](product characteristic property.png)
 
 *Part 2:*
 
@@ -102,11 +102,11 @@ Consider $id_{X_1 \times ... \times X_n} : (X_1 \times ... \times X_n, \T') \to 
 
 This is continuous, so by $(P_P)$, each $\pi_i$ is continuous.
 
-![image-20200522123045215](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/product char property part 2 proof.png)
+![product char property part 2 proof.png](product char property part 2 proof.png)
 
 Now, we will prove that $\T'$ is the product topology.
 
-![image-20200522123514080](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/product char property part 2 proof diagrams.png)
+![product char property part 2 proof diagrams.png](product char property part 2 proof diagrams.png)
 
 Because the projection $\pi_i : (X_1 \times ... \times X_n, \T') \to (X_i, \T_i)$ is continuous, the identity $id: (X_1 \times ... \times X_n, \T') \to (X_1 \times ... \times X_n, \T_{prod})$ is continuous.
 
@@ -130,7 +130,7 @@ $$
 
 **Proof.**
 
-![image-20200522125325392](/Users/rikin/Library/Application Support/typora-user-images/image-20200522125325392.png)
+![product space associativity wtf.png](product space associativity wtf.png)
 
 $f_{12}$ and $f_3$ are continuous if and only if $f$ is continuous if and only if $f_1$ and $f_{23}$ are continuous.
 

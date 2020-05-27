@@ -80,7 +80,7 @@ Suppose $U \subseteq X$ is a saturated open set. By definition of quotient space
 
 Suppose $C \subseteq X$ is a saturated closed set. We want to prove that $q^{-1}\left(q(C)^C\right)$ is open
 
-![image-20200527144311681](/Users/rikin/Documents/School Stuff/2019-2020/mat327/notes/saturation and closed sets.png)
+![saturation and closed sets.png](saturation and closed sets.png)
 
 ...
 

@@ -169,4 +169,4 @@ Now take $S^n \subseteq R^{n+1}$ and define $\overset{2}{\sim}$ on $S^n$ by $x \
 
 We can make these equivalent constructions because $(R^{n+1} \setminus \curlies{0}) / \overset{1}{\sim}$ and $S^n / \overset{2}{\sim}$ make the same identifications, so they are homeomorphic.
 
-![image-20200529130309096](/Users/rikin/Library/Application Support/typora-user-images/image-20200529130309096.png)
+![RPn homemorphism of constructions via quotient.png](RPn homemorphism of constructions via quotient.png)

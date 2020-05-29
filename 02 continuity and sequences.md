@@ -143,6 +143,8 @@ Let $X$ and $Y$ be topological spaces, and $f: X \to Y$ a bijection between them
 - There exist continuous bijections whose inverses are not continuous!
 - e.g. if $f : (X, \T_{discrete}) \to (X, \T_{trivial})$ is the identity map, then $f$ is continuous but its inverse is not!
 
+$X$ and $Y$ are **homeomorphic**, written as $X \cong Y$, if there exists a homeomorphism between them.
+
 ## Covers
 
 Let $X$ be a topological space and $A = \lbrace A_\alpha \rbrace_{\alpha \in I}$ be a collection of subsets of $X$. Then $A$ is a **cover** of $X$ if

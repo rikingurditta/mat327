@@ -139,7 +139,7 @@ The quotient topology on $Y$ induced by $q$ is the only topology on $Y$ that sat
 
 Suppose $q : X \to Y$ is a quotient map.
 
-($\Rightarrow$) If $f : Y \to Z$ is continuous then the composition is continuous
+($\Rightarrow$) If $f : Y \to Z$ is continuous then the composition $f \circ q$ is continuous
 
 ($\Leftarrow$) Suppose $f \circ q: X \to Z$ is continuous. Let $V \subseteq Z$ be open, then $(f \circ q)^{-1}(V) \subseteq X$ is open. Equivalently, $q^{-1}(f^{-1}(V))$ is open. However, $q^{-1}(U)$ is open if and only if $U$ is open, so $f^{-1}(V) \subseteq$ must be open. Thus $f$ is continuous.
 

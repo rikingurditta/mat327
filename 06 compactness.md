@@ -55,7 +55,13 @@ Let $X$ be a compact space and $A \subseteq X$ be an infinite subset. Then $A$ h
 
 **Proof.**
 
-Suppose $A$ is an infinite subset without a limit point. Thus, every $x \in X$ has a neighbourhood $U_x$ which does not include any point from $A$ except possibly $x$ itself. Hence, $\curlies{U_x}_{x \in X}$ is an open cover of $X$. By compactness, there is a finite subcover, so there are $x_1, ..., x_n$ so that $X = U_{x_1} \cup ... \cup U_{x_n}$. Since each $U_x$ contains at most one point of $A$, $A \setminus (U_{x_1} \cup ... \cup U_{x_n}) = A \setminus \curlies{x_1, ..., x_n}$. $A$ is infinite so removing a finite number of points should not make it empty, so there exists $y \in A \setminus (U_{x_1} \cup ... \cup U_{x_n})$. However, $A \setminus (U_{x_1} \cup ... \cup U_{x_n})$ should be equal to $A \setminus X = \emptyset$. Thus we have reached a contradiction, so there must be a limit point of $A$.
+Suppose $A$ is an infinite subset without a limit point. Thus, every $x \in X$ has a neighbourhood $U_x$ which does not include any point from $A$ except possibly $x$ itself. Hence,
+
+$$
+\curlies{U_x}_{x \in X}
+$$
+
+is an open cover of $X$. By compactness, there is a finite subcover, so there are $x_1, ..., x_n$ so that $X = U_{x_1} \cup ... \cup U_{x_n}$. Since each $U_x$ contains at most one point of $A$, $A \setminus (U_{x_1} \cup ... \cup U_{x_n}) = A \setminus \curlies{x_1, ..., x_n}$. $A$ is infinite so removing a finite number of points should not make it empty, so there exists $y \in A \setminus (U_{x_1} \cup ... \cup U_{x_n})$. However, $A \setminus (U_{x_1} \cup ... \cup U_{x_n})$ should be equal to $A \setminus X = \emptyset$. Thus we have reached a contradiction, so there must be a limit point of $A$.
 
 #### Example: $\ell^2(\R)$ is not compact
 
@@ -132,7 +138,13 @@ Suppose $U = \curlies{U_\alpha}_{\alpha \in A}$ is an infinite cover which does 
 
 Since $X$ is second countable, we can find a countable subcover $U_1, U_2, ...$ of $U$. This subcover does not have any finite subcovers as well.
 
-For every $n \in \N$, we have $\curlies{U_i}_{i=1}^n$ is not a subcover, so $U_1 \cup ... \cup U_n \neq X$, so there exists $p_n \in X \setminus (U_1 \cup ... \cup U_n)$. Then we have found a sequence $\curlies{p_n}$, and since $X$ is sequentially compact it has a convergent subsequence $p_{n_1}, p_{n_2}, ...$ which converges to $p$.
+For every $n \in \N$, we have
+
+$$
+\curlies{U_i}_{i=1}^n
+$$
+
+is not a subcover, so $U_1 \cup ... \cup U_n \neq X$, so there exists $p_n \in X \setminus (U_1 \cup ... \cup U_n)$. Then we have found a sequence $\curlies{p_n}$, and since $X$ is sequentially compact it has a convergent subsequence $p_{n_1}, p_{n_2}, ...$ which converges to $p$.
 
 Since $U_1, U_2, ...$ is a cover, $p \in U_m$ for some $m$.
 

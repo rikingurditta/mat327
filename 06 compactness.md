@@ -21,7 +21,13 @@ If $A \subseteq X$ is compact with the subspace topology we say it is a compact 
 
 ### Example: $\R^n$ is not compact
 
-Consider the cover $U = \curlies{B_n(\mathbf 0)}_{n \in \N}$. Clearly $U$ is an open cover of $R^n$, but if we pick a finite subcover $B_{n_1}(\mathbf 0), ..., B_{n_k}(\mathbf 0)$, then its union is $B_{\max(n_1, ..., n_k)}(\mathbf 0)$ which is not equal to $\R^n$.
+Consider the cover
+
+$$
+U = \curlies{B_n(\mathbf 0)}_{n \in \N}
+$$
+
+Clearly $U$ is an open cover of $R^n$, but if we pick a finite subcover $B_{n_1}(\mathbf 0), ..., B_{n_k}(\mathbf 0)$, then its union is $B_{\max(n_1, ..., n_k)}(\mathbf 0)$ which is not equal to $\R^n$.
 
 Generally, it is easier to show that things are not compact than to show that they are compact!
 

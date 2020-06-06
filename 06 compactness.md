@@ -19,6 +19,8 @@ $$
 
 If $A \subseteq X$ is compact with the subspace topology we say it is a compact subspace.
 
+Compactness is a way to generalize the properties of finite or "small" spaces.
+
 ### Example: $\R^n$ is not compact
 
 Consider the cover
@@ -74,7 +76,8 @@ This is a metric space with distance function:
 $$
 d((x_1, x_2, ...), (y_1, y_2, ...)) = \sqrt{\sum_{i=1}^\infty (x_i - y_i)^2}
 $$
-Inside $\ell^2(\R)$ there is an infinite "sphere", aka the set of points $\vec{x}$ where $d(\vec{x}, 0) = 1$.
+
+Inside $\ell^2(\R)$ there is a "sphere", aka the set of points $\vec{x}$ where $d(\vec{x}, 0) = 1$.
 
 This is closed and bounded. Now notice that the sequences
 
@@ -169,3 +172,58 @@ $X$ is compact if and only if every collection of closed sets with the finite in
 A bounded infinite set in $\R^n$ has a limit point.
 
 ![bolzano-weierstrass finite intersection property compactness.png](bolzano-weierstrass finite intersection property compactness.png)
+
+## Generalizations of compactness
+
+Compactness is a very strong property, so we want to relax our notion of it.
+
+There are several generalizations of compactness, including
+
+- local compactness
+- paracompactness
+
+### Local compactness
+
+Let $X$ be a topological space, then $X$ is **locally compact** if for every point $p \in X$, there is a compact set $K \subseteq X$ and an open neighbourhood $U$ of $p$ with $U \subseteq K$.
+
+#### Precompactness
+
+A set $A \subseteq X$ is **precompact** if $\overline A$ is compact. If $A$ is open then we call it a precompact open set.
+
+This notion is important in functional analysis, where it is used to define compact operators.
+
+#### Local compactness and Hausdorff spaces
+
+Let $X$ be a Hausdorff space, then the following are equivalent:
+
+1. $X$ is locally compact
+2. Each point of $X$ has a precompact neighbourhood
+3. $X$ has a basis of precompact open sets
+
+**Proof.**
+
+It is clear that $(3) \Rightarrow (2)$.
+
+Suppose $(2)$. Let $x \in X$ be any point. Then there exists a precompact neighbourhood $U$ of $x$, so $\overline U$ is compact. Each $x$ has a compact set $\overline U$ and a neighbourhood $U \subseteq \overline U$, so $X$ is locally compact. Thus $(2) \Rightarrow (1)$.
+
+Suppose $(1)$. Let $x \in X$ be any point. By $(1)$, there is a compact set $K$ and a neighbourhood $U$ so that $x \in U \subseteq K$. Since $X$ is Hausdorff and $K$ is compact, $K$ is closed. We can define
+
+$$
+V_x = \curlies{V \subseteq K : x \in V \text{ and } V \text{ is open}}
+$$
+
+Then it is clear that $U \in V_x$.
+
+If $S \in V_x$ then $\overline S \subseteq K$. $\overline S$ is a closed subset of a compact space, so it is compact. Thus, $V_x$ is a set of precompact open sets.
+
+Given any open set $R \subseteq X$ with $x \in R$, we know $U \cap R \subseteq K$ is open. Hence $U \cap R \in V_x$.
+
+![locally compact hausdorff has precompact basis U intersect R.png](locally compact hausdorff has precompact basis U intersect R.png)
+
+Thus $V_x$ is almost a basis, but it is contained within $K$. To find a basis for $X$, we define
+$$
+V = \bigcup_{x \in X} V_x
+$$
+
+Then $V$ satisfies the properties of a basis as each $V_x$ does, and it contains only precompact open sets. Thus, $(1) \Rightarrow (3)$.
+

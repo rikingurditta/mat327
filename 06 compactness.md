@@ -227,3 +227,134 @@ $$
 
 Then $V$ satisfies the properties of a basis as each $V_x$ does, and it contains only precompact open sets. Thus, $(1) \Rightarrow (3)$.
 
+## Motivation for Covers
+
+In topology, we care about both local and global properties. These are not the same!
+
+Global properties depend on the whole space, while local properties occur in neighbourhoods around each point.
+
+There are several properties that occur for a space according to two things:
+
+1. They occur locally
+2. There is an agreement of how the property changes as we change neighbourhood
+
+Covers "connect" local and global properties.
+
+### Example: Locally Euclidean
+
+In a topological space $X$, an open set $U \subseteq X$ is **Euclidean** if it is homeomorphic to an open set of $\R^n$ (for some n).
+
+![euclidean subspace homeomorphic to open set in Rn.png](euclidean subspace homeomorphic to open set in Rn.png)
+
+$X$ may not be homeomorphic to $\R^n$, but it may be possible that every neighbourhood is. This is useful when we define manifolds, because of the way euclidean sets can be "glued" together.
+
+### Non-example: Locally orientable
+
+![orientability local property useless.png](orientability local property useless.pngorientability local property useless.png)
+
+Orientability is a global property that does not translate to a local property. It is possible for every open set to be orientable while the space itself is not. So it is not useful to talk about "local orientability".
+
+## Paracompact spaces
+
+### Refinements of covers
+
+Let $X$ be a topological space, and let
+
+$$
+U = \curlies{U_\alpha}_{\alpha \in A}
+$$
+
+be a cover of $X$. Then
+
+$$
+V = \curlies{V_\beta}_{\beta \in B}
+$$
+
+is a **refinement** of $U$ if for every $V_\beta$, there is a $U_\alpha$ with $V_\beta \subseteq U_\alpha$.
+
+### Local finiteness
+
+A cover
+
+$$
+U = \curlies{U_\alpha}_{\alpha \in A}
+$$
+
+is **locally finite** if for every point $x \in X$ there is a neighbourhood $S$ with $x \in S$ so that $S \cap U_\alpha \neq \emptyset$ for a finite number of $\alpha \in A$.
+
+There is an agreement of how the property changes as we change neighbourhood.
+
+For example, consider the cover of $\R^2$ consisting of complements of closed disks as well as the unit disk:
+$$
+U = \curlies{\overline{B_\epsilon(\mathbf 0)}^C : \epsilon > 0} \cup \{B_1(\mathbf 0)\}
+$$
+This is not locally finite at $\mathbf 0$.
+
+![closed disk complement cover not locally finite.png](closed disk complement cover not locally finite.png)
+
+### Paracompactness
+
+Let $X$ be a topological space. $X$ is **paracompact** if every open cover admits a locally finite refinement.
+
+Paracompactness is a mild generalization of compactness.
+
+#### Compactness implies paracompactness
+
+Suppose $X$ is compact. Then an open cover has a finite subcover. Subcovers are refinements, and finite implies locally finite. Thus, every open cover has a locally fine refinement, which is the finite subcover, so $X$ is paracompact.
+
+#### Every second countable locally compact Hausdorff space is paracompact
+
+Note that this implies that $\R^n$ is paracompact! $\R^n$ is not compact though.
+
+## Why do we want compactness or paracompactness?
+
+### Applications of compactness
+
+Compactness is a way to recover properties of finite spaces. In fact, finite spaces are compact, as every open cover is finite! Furthermore, many statements about finite spaces can be restated for compact spaces.
+
+One thing that depends on compactness is discussions about maxima, minima, and critical points with nice structure. (Morse theory looks into this.)
+
+Another application is representation theory, where compactness simplifies a lot of theorems.
+
+### Partitions of unity
+
+Paracompactness allows us to "glue" things
+
+Let $X$ be a topological space and let
+
+$$
+U = \curlies{U_\alpha}_{\alpha \in A}
+$$
+
+be an open cover of $X$. We say a family of functions
+
+$$
+\{\phi_\alpha : U_\alpha \to \R\}_{\alpha \in A}
+$$
+
+is a **partition of unity subordinated to $U$** if:
+
+1. $0 \leq \phi_\alpha(x) \leq 1$
+2. $\text{supp } \phi_\alpha \subseteq U_\alpha$ (the support of a function $\phi$ is the set $\curlies{x : \phi(x) \neq 0}$)
+3. $\curlies{\text{supp } \phi_\alpha}_{\alpha \in A}$ is locally finite
+4. for every $x \in X$, $\ds \sum_{\alpha \in A} \phi_\alpha(x) = 1$
+
+**Discussion**
+
+Properties 1 and 2 make each function act as a sort of "indicator" function
+
+Property 3 makes it so that at each point, only a finite number of functions is non-zero. As a result, property 4 makes sense because the summation is well defined (without worrying about convergence) because only a finite number of values must be added.
+
+#### Example
+
+Let $X$ be a topological space that admits partitions of unity, and let
+
+$$
+U = \curlies{U_\alpha}_{\alpha \in A}
+$$
+
+be an open cover of Euclidean neighbourhoods of dimension 2.
+
+![defining function using partition of unity on locally euclidean space.png](defining function using partition of unity on locally euclidean space.png)
+
+We can define a function $\psi_\alpha$ on each $U_\alpha$, and glue these functions together with our partition of unity for this cover. This results in a well-defined function $\psi$ on all of $X$.

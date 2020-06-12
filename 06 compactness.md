@@ -17,9 +17,13 @@ $$
 X = U_{\alpha_1} \cup ... \cup U_{\alpha_n}
 $$
 
-If $A \subseteq X$ is compact with the subspace topology we say it is a compact subspace.
+If $A \subseteq X$ is compact with the subspace topology we say it is a **compact subspace**.
 
-Compactness is a way to generalize the properties of finite or "small" spaces.
+Compactness is a way to recover properties of finite or "small" spaces. Finite spaces are compact, as every open cover is finite. Furthermore, many statements about finite spaces can be restated for compact spaces.
+
+One thing that depends on compactness is discussions about maxima, minima, and critical points with nice structure. (Morse theory looks into this.)
+
+Another application is representation theory, where compactness simplifies a lot of theorems.
 
 ### Example: $\R^n$ is not compact
 
@@ -306,19 +310,9 @@ Suppose $X$ is compact. Then an open cover has a finite subcover. Subcovers are 
 
 Note that this implies that $\R^n$ is paracompact! $\R^n$ is not compact though.
 
-## Why do we want compactness or paracompactness?
-
-### Applications of compactness
-
-Compactness is a way to recover properties of finite spaces. In fact, finite spaces are compact, as every open cover is finite! Furthermore, many statements about finite spaces can be restated for compact spaces.
-
-One thing that depends on compactness is discussions about maxima, minima, and critical points with nice structure. (Morse theory looks into this.)
-
-Another application is representation theory, where compactness simplifies a lot of theorems.
-
 ### Partitions of unity
 
-Paracompactness allows us to "glue" things
+We care about paracompactness because it allows us to create partitions of unity, allowing us to "glue" things.
 
 Let $X$ be a topological space and let
 
@@ -345,7 +339,7 @@ Properties 1 and 2 make each function act as a sort of "indicator" function
 
 Property 3 makes it so that at each point, only a finite number of functions is non-zero. As a result, property 4 makes sense because the summation is well defined (without worrying about convergence) because only a finite number of values must be added.
 
-#### Example
+#### Example: Gluing functions together
 
 Let $X$ be a topological space that admits partitions of unity, and let
 
@@ -358,3 +352,42 @@ be an open cover of Euclidean neighbourhoods of dimension 2.
 ![defining function using partition of unity on locally euclidean space.png](defining function using partition of unity on locally euclidean space.png)
 
 We can define a function $\psi_\alpha$ on each $U_\alpha$, and glue these functions together with our partition of unity for this cover. This results in a well-defined function $\psi$ on all of $X$.
+
+#### Existence of partitions of unity
+
+Let $X$ be a paracompact Hausdorff space. If $U$ is a cover of $X$ then there exists a partition of unity subordinated to $U$.
+
+### Paracompactness and separation
+
+There are two generalizations of Hausdorff spaces, regular spaces and normal spaces.
+
+#### Regular spaces
+
+Let $X$ be a topological space. $X$ is **regular** if we can separate a point $p$ and a closed set $C$ into disjoint open sets.  i.e. we can find disjoint open $U, V \subseteq X$ so that $p \in U$, $C \subseteq V$.
+
+![regular separation.png](regular separation.png)
+
+Note that sometimes, "regular" is used to mean regular and Hausdorff and "quasiregular" is used to mean regular but not necessarily Hausdorff. This is the case in Lee's book.
+
+#### Normal spaces
+
+Let $X$ be a topological space. $X$ is **normal** if we can separate closed sets into disjoint open sets. i.e. if $A, B \subseteq X$ are closed and disjoint, we can find disjoint open sets $U, V \subseteq X$ so that $A \subseteq U$ and $B \subseteq V$.
+
+A Hausdorff paracompact space is normal.
+
+Normality is equivalent to the existence of partitions of unity!
+
+Note that this term has the same issue as regular spaces with regards to being Hausdorff.
+
+##### Urysohn's lemma
+
+We think about normal sets when we want to think about preimages of different points.
+
+![normal space preimages of points.png](normal space preimages of points.png)
+
+##### 
+
+Let $X$ be a normal and Hausdorff topological space, and let $A, B \subseteq X$ be disjoint closed subsets. Then there exists a continuous function $f : X \to [0, 1]$ so that $f(A) = \curlies{0}$ and $f(B) = \curlies{1}$.
+
+![urysohn lemma graph.png](urysohn lemma graph.png)
+

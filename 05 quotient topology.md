@@ -109,7 +109,7 @@ Quotient maps do not necessarily preserve many properties!
 E.g. consider the equivalence relation on $\R$:
 
 - $x \sim y$ if $x = y$
-- $x \sim y$ if $x, y \in \Z$
+- $x \sim y$ if $x, y \in \mathbb Z$
 
 ![real line bouquet of circles quotient.png](real line bouquet of circles quotient.png)
 

@@ -268,7 +268,7 @@ $$
 U = \curlies{U_\alpha}_{\alpha \in A}
 $$
 
-be a cover of $X$. Then
+be a cover of $X$. Then a cover
 
 $$
 V = \curlies{V_\beta}_{\beta \in B}
@@ -320,7 +320,7 @@ $$
 U = \curlies{U_\alpha}_{\alpha \in A}
 $$
 
-be an open cover of $X$. We say a family of functions
+be an open cover of $X$. We say a family of continuous functions
 
 $$
 \{\phi_\alpha : U_\alpha \to \R\}_{\alpha \in A}

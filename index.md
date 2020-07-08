@@ -1,5 +1,3 @@
-
-
 # MAT327 - Introduction to Topology
 
 Summer 2020 session, taught by [Malors Espinosa Lara](https://malors.com/).

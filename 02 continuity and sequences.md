@@ -104,7 +104,7 @@ Let $X$ be a first countable topological space, let $A \subseteq X$ be any subse
 
 Suppose $x \in A$, then $x$ is the limit of the sequence $x, x, x, ...$
 
-Suppose $x \in \partial A$ but $x \notin A$, then since $X$ is first countable, there exists a nested countable basis at $x$: $U_1 \supseteq U_2 \supseteq U_3 \supseteq ...$ where each $U_i$ is open and contains $x$. Since $x \in \partial A$, for each $n \in \N$, $U_n \cap A \neq \emptyset$ , so we can construct a sequence $\curlies{x_n}$ by choosing each $x_n \in U_n \cap A$. Clearly this sequence converges consists of points in $A$ and converges to $x$.
+Suppose $x \in \partial A$ but $x \notin A$, then since $X$ is first countable, there exists a nested countable basis at $x$: $U_1 \supseteq U_2 \supseteq U_3 \supseteq ...$ where each $U_i$ is open and contains $x$. Since $x \in \partial A$, for each $n \in \N$, $U_n \cap A \neq \emptyset$ , so we can construct a sequence $\curlies{x_n}$ by choosing each $x_n \in U_n \cap A$. Clearly this sequence consists of points in $A$ and converges to $x$.
 
 ($\Leftarrow$) Suppose $x \notin \overline A$, then $x \in \Ext(A)$, and $x_1, x_2, x_3, ...$ is a sequence of points in $A$.
 

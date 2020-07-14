@@ -125,9 +125,11 @@ The equivalence classes defined by this relation are called **connected componen
 ### Example: Orthogonal matrices
 
 We define the space of **orthogonal matrices**
+
 $$
 O(n) = \curlies{A \in GL_n(\R) : A A^T = A^T A = I}
 $$
+
 This space is disconnected and compact.
 
 **Disconnected:**
@@ -143,6 +145,7 @@ det(A)^2 &= 1 \\
 det(A) &= \pm 1
 \end{align*}
 $$
+
 $\curlies{-1, 1}$ is disconnected, so $O(n)$ must also be disconnected.
 
 Note that the determinant is constant on two disjoint subsets of $O(n)$, so there are at least two connected components.
@@ -150,6 +153,7 @@ Note that the determinant is constant on two disjoint subsets of $O(n)$, so ther
 In fact, there are two components. Let $SO(n)$ be the set of matrices in $O(n)$ with determinant $1$. Note that $I \in SO(n)$.
 
 Suppose $A \in SO(n)$, then since $A$ does not change orientation, it can be written as a composition of rotations in different planes, i.e.
+
 $$
 A =
 \begin{bmatrix}
@@ -161,9 +165,11 @@ A =
  & & & & & 1
 \end{bmatrix}
 $$
+
 (the $1$ at the end is not necessarily there if $n$ is even)
 
 Then we can construct a path in $SO(n)$ from $I$ to $A$ as
+
 $$
 \phi(t) =
 \begin{bmatrix}
@@ -175,6 +181,7 @@ $$
  & & & & & 1
 \end{bmatrix} \text{ where } t \in [0, 1]
 $$
+
 Thus, $SO(n)$ is path-connected.
 
 $O(n) \setminus SO(n) = \curlies{-A : A \in SO(n)}$ is homeomorphic to $SO(n)$, so it is also path-connected.

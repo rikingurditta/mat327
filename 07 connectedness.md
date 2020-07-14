@@ -1,4 +1,4 @@
-# Connectivity
+# Connectedness
 
 $$
 \newcommand{\ds}{\displaystyle}
@@ -9,7 +9,7 @@ $$
 \newcommand{\B}{\mathcal B}
 $$
 
-## Connectivity
+## Connectedness
 
 Let $X$ be a topological space. We say $X$ is **disconnected** if there exist two nonempty disjoint open sets $U, V \subseteq X$ so that $X = U \cup V$.
 
@@ -122,3 +122,69 @@ We say $x \underset{c}{\sim} y$ if these exists a connected set $U \subseteq X$ 
 
 The equivalence classes defined by this relation are called **connected components**.
 
+### Example: Orthogonal matrices
+
+We define the space of **orthogonal matrices**
+$$
+O(n) = \curlies{A \in GL_n(\R) : A A^T = A^T A = I}
+$$
+This space is disconnected and compact.
+
+**Disconnected:**
+
+We know that the image of a connected space under a continuous function must be continuous. Consider the determinant $det : O(n) \to \R$. This function is continuous, and its image $det(O(n)) = \curlies{-1, 1}$: suppose $A \in O(n)$, then
+
+$$
+\begin{align*}
+A A^T &= I \\
+det(A A^T) &= 1 \\
+det(A) det(A^T) &= 1 \\
+det(A)^2 &= 1 \\
+det(A) &= \pm 1
+\end{align*}
+$$
+$\curlies{-1, 1}$ is disconnected, so $O(n)$ must also be disconnected.
+
+Note that the determinant is constant on two disjoint subsets of $O(n)$, so there are at least two connected components.
+
+In fact, there are two components. Let $SO(n)$ be the set of matrices in $O(n)$ with determinant $1$. Note that $I \in SO(n)$.
+
+Suppose $A \in SO(n)$, then since $A$ does not change orientation, it can be written as a composition of rotations in different planes, i.e.
+$$
+A =
+\begin{bmatrix}
+\cos(\theta_1) & -\sin(\theta_1) \\
+\sin(\theta_1) & \cos(\theta_1) \\
+ & & \cos(\theta_2) & -\sin(\theta_2) \\
+ & & \sin(\theta_2) & \cos(\theta_2) \\
+ & & & & \ddots \\
+ & & & & & 1
+\end{bmatrix}
+$$
+(the $1$ at the end is not necessarily there if $n$ is even)
+
+Then we can construct a path in $SO(n)$ from $I$ to $A$ as
+$$
+\phi(t) =
+\begin{bmatrix}
+\cos(\theta_1 t) & -\sin(\theta_1 t) \\
+\sin(\theta_1 t) & \cos(\theta_1 t) \\
+ & & \cos(\theta_2 t) & -\sin(\theta_2 t) \\
+ & & \sin(\theta_2 t) & \cos(\theta_2 t) \\
+ & & & & \ddots \\
+ & & & & & 1
+\end{bmatrix} \text{ where } t \in [0, 1]
+$$
+Thus, $SO(n)$ is path-connected.
+
+$O(n) \setminus SO(n) = \curlies{-A : A \in SO(n)}$ is homeomorphic to $SO(n)$, so it is also path-connected.
+
+$SO(n)$ and $O(n) \setminus SO(n)$ are disjoint, each is path connected, and their union is $O(n)$. Thus they are the two connected components of $O(n)$.
+
+**Compact:**
+
+$O(n) = det^{-1}(\curlies{-1, 1})$, so $O(n)$ is the preimage of a closed set under a continuous function, so it is closed.
+
+Since each matrix in $SO(n)$ can be put in the form above, we can see that the norm of each matrix is $n$, since the norm of each column of the matrix is $1$ (because $\sin^2(x) = \cos^2(x) = 1$). The same is true for the rest of $O(n)$, since if $A \in O(n) \setminus SO(n)$ then $-A \in SO(n)$. Thus, $O(n)$ is bounded.
+
+Since $SO(n)$ is a closed and bounded subspace of $\R^{n^2}$, by the Heine-Borel theorem it is compact.

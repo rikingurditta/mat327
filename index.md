@@ -11,4 +11,5 @@ Summer 2020 session, taught by [Malors Espinosa Lara](https://malors.com/).
 5. [The Quotient Topology](05 quotient topology)
 6. [Compactness](06 compactness)
 7. [Connectedness](07 connectedness)
+8. [Homotopy](08 homotopy)
 

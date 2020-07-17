@@ -99,6 +99,7 @@ The main example of homotopy relative to a subspace is path-homotopy
 Consider two points $p, q \in X$ and paths $\alpha, \beta: [0, 1] \to X$ both from $p$ to $q$
 
 Then we can consider **path-homotopy**, aka homotopy of these paths relative to $\curlies{0, 1}$, aka homotopy $H$ so that
+
 $$
 \begin{align*}
 &H(0, t) = p &\quad &H(1, t) = q \\
@@ -126,3 +127,35 @@ The operation on $\pi_1(X, p)$ is composition of homotopy classes, $[\alpha] \cd
 1. Identity: $[\alpha] \cdot [c_p] = [c_p] \cdot [\alpha] = [\alpha]$
 2. Inverse: $[\alpha] \cdot [\overline \alpha] = [\overline \alpha] \cdot [\alpha] = [c_p]$
 3. Associativity: $([\alpha] \cdot [\beta]) \cdot [\gamma] = [\alpha] \cdot ([\beta] \cdot [\gamma])$
+
+## Homotopy-equivalent spaces
+
+Homeomorphic spaces have isomorphic fundamental groups, so the fundamental group is a topological invariant. However, this is strong - spaces do not *need* to be homeomorphic to have the same fundamental group. We now define a new equivalence relation on spaces which also preserves fundamental groups.
+
+Let $X, Y$ be topological spaces. $X$ and $Y$ are **homotopy equivalent** (and $X$ is **homotopic** to $Y$) if there exist continuous maps $f: X \to Y$ and $g: Y \to X$ so that $g \circ f \sim id_X$ and $f \circ g \sim id_Y$.
+
+![mobius strip homotopic to circle.png](mobius strip homotopic to circle.png)
+
+![punctured plane homotopic to circle.png](punctured plane homotopic to circle.png)
+
+### Homeomorphic spaces are homotopic
+
+Suppose $X \cong Y$ and let $h : X \to Y$ be a homeomorphism.
+
+Then $h^{-1} \circ h = id_X \sim id_X$ and $h \circ h^{-1} = id_Y \sim id_Y$ (since every map is homotopic to itself). Thus, $X$ and $H$ are homotopic.
+
+### Homotopy equivalence preserves fundamental group
+
+![homotopy preserves fundamental group circle.png](homotopy preserves fundamental group circle.png)
+
+Here we will investigate a correspondence between topological spaces and groups.
+
+Let $f: X \to Y$ be a continuous map.
+
+Given a loop $\alpha: [0, 1] \to X$, in $X$, we can find a loop in $Y$, $f \circ \alpha: [0, 1] \to Y$.
+
+Let $\alpha'$ be a loop that is homotopic to $\alpha$, then $f \circ \alpha'$ is homotopic to $f \circ \alpha$.
+
+Thus, $f$ "acts the same way" on loops in each path-homotopy class, so it induces a map $f_*: \pi_1(X, x) \to \pi_1(Y, f(x))$ between the fundamental groups of $X$ and $Y$ (based at $x$ and its image). We can show that $f_*([\alpha] \cdot [\beta]) = f_*([\alpha]) \cdot f_*([\beta])$, therefore $f_*$ is a group homomorphism.
+
+Thus, we have established a correspondence between continuous functions and group homomorphisms.

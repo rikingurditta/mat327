@@ -156,6 +156,6 @@ Given a loop $\alpha: [0, 1] \to X$, in $X$, we can find a loop in $Y$, $f \circ
 
 Let $\alpha'$ be a loop that is homotopic to $\alpha$, then $f \circ \alpha'$ is homotopic to $f \circ \alpha$.
 
-Thus, $f$ "acts the same way" on loops in each path-homotopy class, so it induces a map $f_*: \pi_1(X, x) \to \pi_1(Y, f(x))$ between the fundamental groups of $X$ and $Y$ (based at $x$ and its image). We can show that $f_*([\alpha] \cdot [\beta]) = f_*([\alpha]) \cdot f_*([\beta])$, therefore $f_*$ is a group homomorphism.
+Thus, $f$ "acts the same way" on loops in each path-homotopy class, so it induces a map $f_\ast: \pi_1(X, x) \to \pi_1(Y, f(x))$ between the fundamental groups of $X$ and $Y$ (based at $x$ and its image). We can show that $f_\ast([\alpha] \cdot [\beta]) = f_\ast([\alpha]) \cdot f_\ast([\beta])$, therefore $f_\ast$ is a group homomorphism.
 
 Thus, we have established a correspondence between continuous functions and group homomorphisms.

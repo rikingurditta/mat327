@@ -12,4 +12,5 @@ Summer 2020 session, taught by [Malors Espinosa Lara](https://malors.com/).
 6. [Compactness](06 compactness)
 7. [Connectedness](07 connectedness)
 8. [Homotopy](08 homotopy)
+9. [Covering Spaces](09 covering spaces)
 

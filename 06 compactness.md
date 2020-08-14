@@ -7,6 +7,7 @@ $$
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ext}{\text{Ext}}
 \newcommand{\B}{\mathcal B}
+\newcommand{\Sp}{\mathbb S}
 $$
 
 ## Compactness
@@ -49,9 +50,9 @@ What we want to do is to find equivalent properties.
 
 A subset of $\R^n$ is compact if and only if it is closed and bounded.
 
-#### Example: $S^n$ is compact
+#### Example: $\Sp^n$ is compact
 
-If $f: \R^{n+1} \to \R$ is defined by $f(\mathbf x) = \lvert\mathbf x\rvert - 1$, then $f$ is continuous. The preimage of a closed set under a continuous function is closed, so $f^{-1}(\curlies{\mathbf 0}) = S^n$ is closed. Furthermore, $S^n$ is clearly bounded as every point in it has a norm of 1. Thus by the Heine-Borel theorem, $S^n$ is compact.
+If $f: \R^{n+1} \to \R$ is defined by $f(\mathbf x) = \lvert\mathbf x\rvert - 1$, then $f$ is continuous. The preimage of a closed set under a continuous function is closed, so $f^{-1}(\curlies{\mathbf 0}) = \Sp^n$ is closed. Furthermore, $\Sp^n$ is clearly bounded as every point in it has a norm of 1. Thus by the Heine-Borel theorem, $\Sp^n$ is compact.
 
 Note that this theorem only applies to $\R^n$! It does not make sense in a topological space that is not a metric space. Furthermore, it does not hold in metric spaces in general.
 

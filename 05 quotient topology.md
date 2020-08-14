@@ -7,6 +7,7 @@ $$
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ext}{\text{Ext}}
 \newcommand{\B}{\mathcal B}
+\newcommand{\Sp}{\mathbb S}
 $$
 
 ## The Quotient Topology
@@ -163,10 +164,10 @@ Let $X$ be a topological space and $q_1: X \to Y_1$ and $q_2 : X \to Y_2$ be quo
 
 Let $X = R^{n+1}$, and define an equivalence relation $\overset{1}{\sim}$ on $R^{n+1} \setminus \curlies{0}$ by $x \overset{1}{\sim} y$ if $x = \lambda y$ for some $\lambda \in \R, \lambda \neq 0$. We define the projective plane as $\mathbb{RP}^n = (R^{n+1} \setminus \curlies{0}) / \overset{1}{\sim}$.
 
-Now take $S^n \subseteq R^{n+1}$ and define $\overset{2}{\sim}$ on $S^n$ by $x \overset{2}{\sim} x$ and $x \overset{2}{\sim} -x$. We endow $S^n$ with the subspace topology, then we can also define the projective plane $\mathbb{RP}^n = S^n / \overset{2}{\sim}$.
+Now take $\Sp^n \subseteq R^{n+1}$ and define $\overset{2}{\sim}$ on $\Sp^n$ by $x \overset{2}{\sim} x$ and $x \overset{2}{\sim} -x$. We endow $\Sp^n$ with the subspace topology, then we can also define the projective plane $\mathbb{RP}^n = \Sp^n / \overset{2}{\sim}$.
 
 ![projective plane construction quotient Sn.png](projective plane construction quotient Sn.png)
 
-We can make these equivalent constructions because $(R^{n+1} \setminus \curlies{0}) / \overset{1}{\sim}$ and $S^n / \overset{2}{\sim}$ make the same identifications, so they are homeomorphic.
+We can make these equivalent constructions because $(R^{n+1} \setminus \curlies{0}) / \overset{1}{\sim}$ and $\Sp^n / \overset{2}{\sim}$ make the same identifications, so they are homeomorphic.
 
 ![RPn homemorphism of constructions via quotient.png](RPn homemorphism of constructions via quotient.png)

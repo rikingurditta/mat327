@@ -7,6 +7,7 @@ $$
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ext}{\text{Ext}}
 \newcommand{\B}{\mathcal B}
+\newcommand{\Sp}{\mathbb S}
 $$
 
 ## Discerning topological spaces
@@ -19,7 +20,7 @@ The main problem in algebraic topology is figuring out when topological spaces a
 
 A **topological invariant** is a property that does not change under homeomorphism, so if $ti$ is a topological invariant and ,$X, Y$ are homeomorphic spaces, then $ti(X) = ti(Y)$
 
-- compactness is a topological invariant, so we know that $\R^m$ and $S^n$ are never homeomorphic
+- compactness is a topological invariant, so we know that $\R^m$ and $\Sp^n$ are never homeomorphic
 - connectedness is a topological invariant, and $\R$ is disconnected if we remove a single point but $\R^2$ is not, so $\R$ and $\R^2$ are not homeomorphic
 
 ## Homotopy
@@ -127,6 +128,10 @@ The operation on $\pi_1(X, p)$ is composition of homotopy classes, $[\alpha] \cd
 1. Identity: $[\alpha] \cdot [c_p] = [c_p] \cdot [\alpha] = [\alpha]$
 2. Inverse: $[\alpha] \cdot [\overline \alpha] = [\overline \alpha] \cdot [\alpha] = [c_p]$
 3. Associativity: $([\alpha] \cdot [\beta]) \cdot [\gamma] = [\alpha] \cdot ([\beta] \cdot [\gamma])$
+
+#### Simply connected spaces
+
+We say $X$ is simply connected if its fundamental group is trivial, so $\pi_1(X, x) = [c_x]$, which is isomorphic to $\curlies{1}$.
 
 ## Homotopy-equivalent spaces
 

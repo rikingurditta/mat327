@@ -7,6 +7,7 @@ $$
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ext}{\text{Ext}}
 \newcommand{\B}{\mathcal B}
+\newcommand{\Sp}{\mathbb S}
 $$
 
 ## Subspace Topology
@@ -42,7 +43,7 @@ We say $A$ is a **subspace** of $X$ to mean $A \subseteq X$ with the subspace to
   - we need to be precise, because $\T_A \not \subseteq \T$
   - thus if $B$ is open relative to $A$, that does not necessarily mean that $B$ is open relative to $X$
 
-### Example - $S^1 \subseteq \R^2$
+### Example - $\Sp^1 \subseteq \R^2$
 
 ![S1 subspace topology](S1 subspace topology.png)
 
@@ -152,17 +153,17 @@ Let $f: X \to Y$ be continuous.
 2. ![subspace range restriction composition diagram.png](subspace range restriction composition diagram.png)
 3. $f_Z = \iota_Y \circ f$ is a composition of continuous functions, so it is continuous
 
-### Example: Isometries on $S^2$
+### Example: Isometries on $\Sp^2$
 
-Recall that $S^2 \subseteq \R^3$ is the unit sphere. Let $A \in \mathcal L(S^2)$ be a linear isometry, so $\langle Ax, Ay \rangle = \langle Ax, Ay \rangle$. Prove it is continuous when $S^2$ is a subspace of $\R^3$.
+Recall that $\Sp^2 \subseteq \R^3$ is the unit sphere. Let $A \in \mathcal L(\Sp^2)$ be a linear isometry, so $\langle Ax, Ay \rangle = \langle Ax, Ay \rangle$. Prove it is continuous when $\Sp^2$ is a subspace of $\R^3$.
 
 **Proof.**
 
 A is a linear operator, so it is a continuous function on $\R^3$.
 
-Then the restriction $A: S^2 \to \R^3$ is continuous.
+Then the restriction $A: \Sp^2 \to \R^3$ is continuous.
 
-Because $A$ is an isometry, $A(S^2) \subseteq S^2$. Then we can restrict the codomain and see that $A : S^2 \to S^2$ is continuous.
+Because $A$ is an isometry, $A(\Sp^2) \subseteq \Sp^2$. Then we can restrict the codomain and see that $A : \Sp^2 \to \Sp^2$ is continuous.
 
 ### Example: Invertible $2 \times 2$ matrices
 

@@ -7,6 +7,7 @@ $$
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ext}{\text{Ext}}
 \newcommand{\B}{\mathcal B}
+\newcommand{\Sp}{\mathbb S}
 $$
 
 ## Connectedness
@@ -98,7 +99,7 @@ Thus $X$ is connected.
 
 For example, $\R^n$ is connected, as given points $\mathbf x$ and $\mathbf y$ we can construct the path $\alpha(t) = t\mathbf x + (1 - t) \mathbf y$ where $t \in [0, 1]$.
 
-$S^n$ is also connected as given points $\mathbf x$ and $\mathbf y$ we can construct the path $\alpha(t) = cos(t)\mathbf x + sin(t) \mathbf y$ where $t \in [0, 2\pi]$.
+$\Sp^n$ is also connected as given points $\mathbf x$ and $\mathbf y$ we can construct the path $\alpha(t) = cos(t)\mathbf x + sin(t) \mathbf y$ where $t \in [0, 2\pi]$.
 
 ### Connected does not imply path connected
 
